@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neves Barbearia — Corte e Barba na Vila Matilde, São Paulo</title>
+  <meta name="description" content="Barbearia na Vila Matilde com mais de 10 anos de experiência, nota 5,0 no Google e 86 avaliações. Corte, barba, tratamentos e atendimento de confiança. Agende agora.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Neves Barbearia — Vila Matilde, São Paulo">
+  <meta property="og:description" content="Corte, barba e atendimento de confiança. Nota 5,0 no Google · 86 avaliações.">
+  <meta property="og:image" content="hero-gabriel-trabalhando.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Schema.org: BarberShop (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Neves Barbearia",
+    "image": "fachada.png",
+    "description": "Barbearia na Vila Matilde com mais de 10 anos de experiência, corte, barba e tratamentos masculinos com atendimento de confiança.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua do Trabalho, 224",
+      "addressLocality": "Vila Matilde",
+      "addressRegion": "SP",
+      "postalCode": "03531-010",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.530,
+      "longitude": -46.543
+    },
+    "telephone": "+5511965087899",
+    "url": "https://sites.appbarber.com.br/nevesbarbearia",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "86"
+    },
+    "sameAs": [
+      "https://www.instagram.com/obarbeironeves/"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Gabriel Neves"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================
+       RESET & VARIÁVEIS
+    ======================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --preto:         #0A0A0A;
+      --card:          #141414;
+      --card2:         #1C1C1C;
+      --branco:        #FFFFFF;
+      --dourado:       #C4A07A;
+      --dourado-hover: #D4B08A;
+      --dourado-dark:  #8B6E4E;
+      --cinza:         #888888;
+      --cinza-claro:   #BBBBBB;
+      --serif:         'Playfair Display', Georgia, serif;
+      --sans:          'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--preto);
+      color: var(--branco);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ========================
+       NAV
+    ======================== */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.9) 0%, transparent 100%);
+      transition: background 0.3s, padding 0.3s;
+    }
+
+    nav.scrolled {
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 14px 20px;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--branco);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-cta {
+      background: var(--dourado);
+      color: var(--preto);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 50px;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .nav-cta:active { transform: scale(0.97); }
+
+    /* ========================
+       BOTÕES
+    ======================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--dourado);
+      color: var(--preto);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:active { transform: scale(0.97); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--branco);
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 13px 24px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.22);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:active { transform: scale(0.97); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(196,160,122,0.4);
+      color: var(--dourado);
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    /* hover apenas em dispositivos com mouse */
+    @media (hover: hover) {
+      .nav-cta:hover { background: var(--dourado-hover); }
+      .btn-primary:hover { background: var(--dourado-hover); }
+      .btn-secondary:hover { border-color: rgba(255,255,255,0.55); }
+      .btn-outline:hover { border-color: var(--dourado); background: rgba(196,160,122,0.08); }
+    }
+
+    /* ========================
+       HERO
+    ======================== */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 20px 56px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('hero-gabriel-trabalhando.png');
+      background-size: cover;
+      background-position: center 20%;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,10,10,0.25) 0%,
+        rgba(10,10,10,0.05) 25%,
+        rgba(10,10,10,0.6) 60%,
+        rgba(10,10,10,0.96) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(196,160,122,0.12);
+      border: 1px solid rgba(196,160,122,0.28);
+      color: var(--dourado);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 8.5vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--branco);
+      margin-bottom: 16px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--dourado);
+    }
+
+    .hero-sub {
+      font-size: 0.97rem;
+      color: var(--cinza-claro);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 400px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ========================
+       TICKER / PROOF BAR
+    ======================== */
+    #proof-bar {
+      background: var(--card);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 15px 0;
+      overflow: hidden;
+    }
+
+    .ticker-wrap { overflow: hidden; width: 100%; }
+
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: ticker-scroll 24s linear infinite;
+      will-change: transform;
+    }
+
+    .ticker-track:hover { animation-play-state: paused; }
+
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      color: var(--cinza-claro);
+      white-space: nowrap;
+      padding: 0 36px;
+    }
+
+    .ticker-stars { color: var(--dourado); letter-spacing: 3px; font-size: 0.8rem; }
+    .ticker-item strong { color: var(--branco); }
+
+    .ticker-sep {
+      color: rgba(255,255,255,0.18);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    /* ========================
+       SEÇÕES — BASE
+    ======================== */
+    section { padding: 72px 20px; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.85rem, 5.5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--branco);
+      margin-bottom: 16px;
+    }
+
+    .section-title em { font-style: italic; color: var(--dourado); }
+
+    .section-sub {
+      color: var(--cinza);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      max-width: 500px;
+    }
+
+    /* ========================
+       SERVIÇOS
+    ======================== */
+    #servicos { background: var(--preto); }
+
+    .servicos-header { margin-bottom: 44px; }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .servico-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.055);
+      border-radius: 16px;
+      padding: 26px 22px;
+      transition: border-color 0.25s;
+    }
+
+    @media (hover: hover) {
+      .servico-card:hover { border-color: rgba(196,160,122,0.28); }
+    }
+
+    .servico-icon {
+      width: 40px;
+      height: 40px;
+      color: var(--dourado);
+      margin-bottom: 14px;
+    }
+    .servico-icon svg { width: 100%; height: 100%; }
+
+    .servico-nome {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--branco);
+      margin-bottom: 10px;
+    }
+
+    .servico-lista {
+      font-size: 0.84rem;
+      color: var(--cinza);
+      line-height: 2;
+    }
+
+    .servico-lista li::before { content: '— '; color: var(--dourado); }
+
+    /* ========================
+       SOBRE GABRIEL
+    ======================== */
+    #sobre { background: var(--card); }
+
+    .sobre-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+
+    .sobre-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .sobre-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .sobre-badge {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      background: rgba(10,10,10,0.9);
+      border: 1px solid rgba(196,160,122,0.28);
+      border-radius: 12px;
+      padding: 12px 16px;
+      backdrop-filter: blur(6px);
+    }
+
+    .sobre-badge-num {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--dourado);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .sobre-badge-text {
+      font-size: 0.72rem;
+      color: var(--cinza-claro);
+      margin-top: 3px;
+    }
+
+    .sobre-texto p {
+      color: var(--cinza-claro);
+      font-size: 0.94rem;
+      line-height: 1.82;
+      margin-bottom: 16px;
+    }
+
+    .sobre-quote {
+      border-left: 2px solid var(--dourado);
+      padding-left: 18px;
+      margin: 24px 0;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--branco);
+      line-height: 1.55;
+    }
+
+    /* ========================
+       GALERIA
+    ======================== */
+    #galeria { background: var(--preto); }
+
+    .galeria-header { margin-bottom: 36px; }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .galeria-item {
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    @media (hover: hover) {
+      .galeria-item:hover img { transform: scale(1.05); }
+    }
+
+    /* ========================
+       DEPOIMENTOS
+    ======================== */
+    #depoimentos { background: var(--card); }
+
+    .depo-header { margin-bottom: 44px; }
+
+    /* carrossel */
+    .depo-carousel { position: relative; }
+
+    .depo-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+
+    .depo-track::-webkit-scrollbar { display: none; }
+
+    .depo-card {
+      background: var(--preto);
+      border: 1px solid rgba(255,255,255,0.055);
+      border-radius: 16px;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(100% - 32px);
+      scroll-snap-align: start;
+    }
+
+    /* dots */
+    .depo-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .depo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .depo-dot.active {
+      background: var(--dourado);
+      transform: scale(1.25);
+    }
+
+    .depo-stars {
+      color: var(--dourado);
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+
+    .depo-text {
+      font-size: 0.91rem;
+      color: var(--cinza-claro);
+      line-height: 1.78;
+      font-style: italic;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .depo-autor {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .depo-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--dourado-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--branco);
+      flex-shrink: 0;
+    }
+
+    .depo-nome { font-weight: 600; font-size: 0.86rem; color: var(--branco); }
+    .depo-fonte { font-size: 0.72rem; color: var(--cinza); margin-top: 1px; }
+
+    .depo-cta { margin-top: 40px; text-align: center; }
+
+    /* ========================
+       LOCALIZAÇÃO
+    ======================== */
+    #localizacao { background: var(--preto); }
+
+    .localizacao-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+
+    .mapa-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+      aspect-ratio: 4 / 3;
+    }
+
+    .mapa-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .loc-info { display: grid; gap: 28px; }
+
+    .info-block { display: grid; gap: 8px; }
+
+    .info-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dourado);
+    }
+
+    .info-value {
+      color: var(--cinza-claro);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .horarios-table { display: grid; gap: 3px; }
+
+    .h-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      color: var(--cinza-claro);
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .h-row:last-child { border-bottom: none; }
+    .h-row .dia { color: var(--cinza); }
+    .h-row.fechado .hora { color: var(--cinza); }
+
+    .loc-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ========================
+       CTA FINAL
+    ======================== */
+    #cta-final {
+      background: linear-gradient(135deg, #150F06 0%, #0A0A0A 70%);
+      border-top: 1px solid rgba(196,160,122,0.12);
+      border-bottom: 1px solid rgba(196,160,122,0.12);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #cta-final .section-title { max-width: 480px; margin: 0 auto 12px; }
+    #cta-final .section-sub { max-width: 400px; margin: 0 auto 36px; text-align: center; }
+
+    .cta-final-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    /* ========================
+       FOOTER
+    ======================== */
+    footer {
+      background: var(--card);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--branco);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 14px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cinza-claro);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    @media (hover: hover) {
+      .footer-social a:hover { border-color: var(--dourado); color: var(--dourado); }
+    }
+
+    .footer-copy {
+      font-size: 0.76rem;
+      color: var(--cinza);
+      line-height: 1.65;
+    }
+
+    /* ========================
+       WHATSAPP FLOAT
+    ======================== */
+    .wa-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 150;
+      width: 54px;
+      height: 54px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.38);
+      transition: transform 0.2s;
+    }
+
+    @media (hover: hover) {
+      .wa-float:hover { transform: scale(1.08); }
+    }
+
+    .wa-float svg { width: 26px; height: 26px; fill: white; }
+
+    /* ========================
+       DESKTOP — 640px+
+    ======================== */
+    @media (min-width: 640px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .depo-card { flex: 0 0 calc(50% - 10px); }
+    }
+
+    /* ========================
+       DESKTOP — 900px+
+    ======================== */
+    @media (min-width: 900px) {
+      nav { padding: 20px 48px; }
+      nav.scrolled { padding: 14px 48px; }
+      section { padding: 100px 48px; }
+      #hero { padding: 0 48px 88px; }
+      #cta-final { padding: 100px 48px; }
+      footer { padding: 48px; }
+
+      .hero-title { font-size: 3.6rem; }
+
+      .sobre-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        align-items: center;
+      }
+
+      .sobre-img-wrap { aspect-ratio: auto; height: 580px; }
+
+      .servicos-grid { grid-template-columns: repeat(3, 1fr); }
+
+      .galeria-grid { grid-template-columns: repeat(3, 1fr); }
+
+      .depo-card { flex: 0 0 calc(50% - 10px); }
+
+      .localizacao-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+
+      .mapa-wrap { aspect-ratio: 1 / 1; }
+
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .depo-card { flex: 0 0 calc(25% - 13px); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Neves Barbearia</a>
+  <a href="https://sites.appbarber.com.br/nevesbarbearia" target="_blank" rel="noopener" class="nav-cta">Agendar agora</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg" role="img" aria-label="Gabriel Neves utilizando navalha durante atendimento na Neves Barbearia"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span aria-hidden="true">⭐</span>
+      <span>5,0 no Google · 86 avaliações</span>
+    </div>
+    <h1 class="hero-title">
+      Mais do que um corte.<br>
+      É sobre sair <em>melhor do que entrou.</em>
+    </h1>
+    <p class="hero-sub">
+      Barbearia na Vila Matilde com 10 anos de experiência. Corte, barba e cuidado masculino com técnica, agilidade e atendimento de verdade.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://sites.appbarber.com.br/nevesbarbearia" target="_blank" rel="noopener" class="btn-primary">
+        Agendar agora →
+      </a>
+      <a href="https://wa.me/5511965087899" target="_blank" rel="noopener" class="btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROOF BAR (ticker) ===================== -->
+<div id="proof-bar" role="region" aria-label="Credenciais da Neves Barbearia">
+  <div class="ticker-wrap">
+    <div class="ticker-track" aria-hidden="true">
+      <!-- set 1 -->
+      <div class="ticker-item"><span class="ticker-stars">★★★★★</span><strong>5,0 no Google</strong></div>
+      <span class="ticker-sep">·</span>
+      <div class="ticker-item"><strong>86</strong> avaliações verificadas</div>
+      <span class="ticker-sep">·</span>
+      <div class="ticker-item"><strong>10+</strong> anos de experiência</div>
+      <span class="ticker-sep">·</span>
+      <div class="ticker-item">Vila Matilde, <strong>São Paulo</strong></div>
+      <span class="ticker-sep">·</span>
+      <!-- set 2 — duplicado para loop contínuo -->
+      <div class="ticker-item"><span class="ticker-stars">★★★★★</span><strong>5,0 no Google</strong></div>
+      <span class="ticker-sep">·</span>
+      <div class="ticker-item"><strong>86</strong> avaliações verificadas</div>
+      <span class="ticker-sep">·</span>
+      <div class="ticker-item"><strong>10+</strong> anos de experiência</div>
+      <span class="ticker-sep">·</span>
+      <div class="ticker-item">Vila Matilde, <strong>São Paulo</strong></div>
+      <span class="ticker-sep">·</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SERVIÇOS ===================== -->
+<section id="servicos">
+  <div class="container">
+    <div class="servicos-header">
+      <p class="section-label">O que oferecemos</p>
+      <h2 class="section-title">Tudo que você precisa,<br><em>em um só lugar.</em></h2>
+      <p class="section-sub">Do corte clássico ao tratamento completo. Aqui você resolve tudo sem precisar ir em outro lugar.</p>
+    </div>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <div class="servico-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <h3 class="servico-nome">Cabelo</h3>
+        <ul class="servico-lista">
+          <li>Corte de cabelo</li>
+          <li>Degradê / Fade</li>
+          <li>Corte militar</li>
+          <li>Corte com tesoura ou navalha</li>
+          <li>Personalizado · Pezinho</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="14" height="8" rx="2"/><path d="M16 12h6"/><path d="M16 10L22 8M16 14L22 16"/></svg></div>
+        <h3 class="servico-nome">Barba</h3>
+        <ul class="servico-lista">
+          <li>Barba completa</li>
+          <li>Manutenção de barba</li>
+          <li>Barba com navalha</li>
+          <li>Toalha quente</li>
+          <li>Barboterapia</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <h3 class="servico-nome">Combos</h3>
+        <ul class="servico-lista">
+          <li>Corte + Barba</li>
+          <li>Corte + Botox</li>
+          <li>Corte + Progressiva</li>
+          <li>Corte + Relaxamento</li>
+          <li>Corte + Barba + Botox</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
+        <h3 class="servico-nome">Tratamentos</h3>
+        <ul class="servico-lista">
+          <li>Botox capilar</li>
+          <li>Progressiva</li>
+          <li>Relaxamento</li>
+          <li>Hidratação capilar</li>
+          <li>Coloração · Pigmentação</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z"/><path d="M5 3v3M3.5 4.5H6.5M19 17v3M17.5 18.5H20.5"/></svg></div>
+        <h3 class="servico-nome">Estética</h3>
+        <ul class="servico-lista">
+          <li>Sobrancelha</li>
+          <li>Limpeza de pele</li>
+          <li>Depilação nariz</li>
+          <li>Depilação ouvido</li>
+          <li>Combo nariz + ouvido</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE GABRIEL ===================== -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="sobre-img-wrap">
+        <img src="gabriel-perfil.png" alt="Gabriel Neves, barbeiro e fundador da Neves Barbearia em Vila Matilde, São Paulo" loading="lazy">
+        <div class="sobre-badge" aria-hidden="true">
+          <div class="sobre-badge-num">10+</div>
+          <div class="sobre-badge-text">anos de experiência</div>
+        </div>
+      </div>
+      <div class="sobre-texto">
+        <p class="section-label">Quem está por trás</p>
+        <h2 class="section-title">Gabriel Neves,<br><em>o barbeiro.</em></h2>
+        <p>Tudo começou de forma simples: raspar o cabelo do irmão enquanto ele servia o exército. O que parecia um favor virou curiosidade, a curiosidade virou paixão — e a paixão virou profissão.</p>
+        <blockquote class="sobre-quote">"Cada pessoa que senta na cadeira merece sair não só com o visual arrumado, mas mais confiante."</blockquote>
+        <p>Com um curso de barbearia bancado pelos pais e 7 anos de experiência na Barbearia do Luca — uma das melhores de Guarulhos — Gabriel chegou à Vila Matilde com técnica consolidada e uma visão clara: atender bem, com agilidade e sem abrir mão do cuidado.</p>
+        <p>Na Neves Barbearia, você não é mais um cliente. É uma pessoa. Tem café, boa música, conversa e um profissional que faz questão de conhecer o seu estilo.</p>
+        <div style="margin-top:32px">
+          <a href="https://sites.appbarber.com.br/nevesbarbearia" target="_blank" rel="noopener" class="btn-primary">Agendar com o Gabriel →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALERIA ===================== -->
+<section id="galeria">
+  <div class="container">
+    <div class="galeria-header">
+      <p class="section-label">Galeria</p>
+      <h2 class="section-title">O trabalho<br><em>fala por si.</em></h2>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="corte-01.png" alt="Corte de cabelo degradê com barba finalizado na Neves Barbearia, Vila Matilde" loading="lazy">
+      </div>
+      <div class="galeria-item">
+        <img src="corte-02.png" alt="Corte fade alto com franja penteada feito por Gabriel Neves" loading="lazy">
+      </div>
+      <div class="galeria-item">
+        <img src="corte-03.png" alt="Corte afro com fade e barba realizado na Neves Barbearia" loading="lazy">
+      </div>
+      <div class="galeria-item">
+        <img src="interna-01.png" alt="Interior da Neves Barbearia com cadeiras profissionais e ambiente moderno, Vila Matilde SP" loading="lazy">
+      </div>
+      <div class="galeria-item">
+        <img src="interna-02.png" alt="Ambiente da Neves Barbearia com poltrona clássica, sofá e parede de concreto" loading="lazy">
+      </div>
+      <div class="galeria-item">
+        <img src="fachada.png" alt="Fachada da Neves Barbearia na Rua do Trabalho 224, Vila Matilde, São Paulo" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEPOIMENTOS ===================== -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="depo-header">
+      <p class="section-label">O que dizem os clientes</p>
+      <h2 class="section-title">Palavras de quem<br><em>já está na cadeira.</em></h2>
+    </div>
+    <div class="depo-carousel">
+      <div class="depo-track" id="depoTrack">
+        <div class="depo-card">
+          <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="depo-text">"Sou cliente do Neves há muitos anos e só tenho elogios para esse excelente profissional e ser humano incrível. O atendimento é simplesmente impecável — o melhor que já recebi em qualquer barbearia. Ele faz questão de oferecer um tratamento VIP que faz toda a diferença. Recomendo de olhos fechados!"</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" aria-hidden="true">JO</div>
+            <div>
+              <div class="depo-nome">Jonatha Oliveira</div>
+              <div class="depo-fonte">Google · avaliação verificada</div>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="depo-text">"Excelente profissional, competente e demonstra uma habilidade excepcional em suas mãos! Sua versatilidade e precisão nos cortes são notáveis, proporcionando resultados impecáveis que me faz ser um cliente fiel há 4 anos."</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" aria-hidden="true">RR</div>
+            <div>
+              <div class="depo-nome">Ricardo Roldão</div>
+              <div class="depo-fonte">Google · avaliação verificada</div>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="depo-text">"Excelente profissional, atencioso e muito educado! Sou suspeito pra falar, pois eu e meu filho já cortamos com ele há 6 anos!! Pode confiar que é sucesso garantido!!! Sempre na régua!!!"</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" aria-hidden="true">RT</div>
+            <div>
+              <div class="depo-nome">Rafael Tozzati Rodrigues</div>
+              <div class="depo-fonte">Google · avaliação verificada</div>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="depo-text">"Pensa num lugar que não pedi nada e recebi tudo! O Neves é um ótimo profissional, gente boa e sabe fidelizar. Ganhou mais um cliente!"</p>
+          <div class="depo-autor">
+            <div class="depo-avatar" aria-hidden="true">AF</div>
+            <div>
+              <div class="depo-nome">Ademar Ferreira</div>
+              <div class="depo-fonte">Google · avaliação verificada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-dots" id="depoDots" aria-hidden="true">
+        <button class="depo-dot active" data-index="0"></button>
+        <button class="depo-dot" data-index="1"></button>
+        <button class="depo-dot" data-index="2"></button>
+        <button class="depo-dot" data-index="3"></button>
+      </div>
+    </div>
+    <div class="depo-cta">
+      <a href="https://www.google.com/maps/search/Neves+Barbearia,+Rua+do+Trabalho+224,+Vila+Matilde,+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="btn-outline">
+        Ver todas as 86 avaliações no Google →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCALIZAÇÃO ===================== -->
+<section id="localizacao">
+  <div class="container">
+    <div style="margin-bottom:44px">
+      <p class="section-label">Onde estamos</p>
+      <h2 class="section-title">Na Vila Matilde,<br><em>do seu lado.</em></h2>
+    </div>
+    <div class="localizacao-inner">
+      <div class="mapa-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=Rua+do+Trabalho+224+Vila+Matilde+São+Paulo+SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          title="Mapa de localização da Neves Barbearia — Rua do Trabalho 224, Vila Matilde, São Paulo"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="loc-info">
+        <div class="info-block">
+          <span class="info-label">Endereço</span>
+          <p class="info-value">Rua do Trabalho, 224<br>Vila Matilde, São Paulo – SP<br>CEP: 03531-010</p>
+        </div>
+        <div class="info-block">
+          <span class="info-label">Horários de atendimento</span>
+          <div class="horarios-table">
+            <div class="h-row fechado">
+              <span class="dia">Segunda-feira</span>
+              <span class="hora">Fechado</span>
+            </div>
+            <div class="h-row">
+              <span class="dia">Terça a Sexta</span>
+              <span class="hora">09:00 – 19:00</span>
+            </div>
+            <div class="h-row">
+              <span class="dia">Sábado</span>
+              <span class="hora">09:00 – 19:00</span>
+            </div>
+            <div class="h-row">
+              <span class="dia">Domingo</span>
+              <span class="hora">09:00 – 13:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-label">Contato</span>
+          <p class="info-value">(11) 96508-7899</p>
+        </div>
+        <div class="loc-ctas">
+          <a href="https://wa.me/5511965087899" target="_blank" rel="noopener" class="btn-primary">Falar no WhatsApp</a>
+          <a href="https://sites.appbarber.com.br/nevesbarbearia" target="_blank" rel="noopener" class="btn-secondary">Agendar online</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section id="cta-final">
+  <div class="container">
+    <p class="section-label">Pronto para o próximo passo?</p>
+    <h2 class="section-title">Agenda aberta.<br><em>Só falta você.</em></h2>
+    <p class="section-sub">Agende online em segundos ou chama no WhatsApp. Sem enrolação.</p>
+    <div class="cta-final-btns">
+      <a href="https://sites.appbarber.com.br/nevesbarbearia" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.95rem;padding:15px 34px">Agendar agora →</a>
+      <a href="https://wa.me/5511965087899" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Neves Barbearia</div>
+      <p style="font-size:0.78rem;color:var(--cinza);margin-top:4px">Rua do Trabalho, 224 · Vila Matilde · São Paulo – SP</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/obarbeironeves/" target="_blank" rel="noopener" aria-label="Instagram da Neves Barbearia">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://wa.me/5511965087899" target="_blank" rel="noopener" aria-label="WhatsApp da Neves Barbearia">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">© 2025 Neves Barbearia<br>Rua do Trabalho, 224 · Vila Matilde · São Paulo – SP</p>
+  </div>
+</footer>
+
+<!-- ===================== WHATSAPP FLOAT ===================== -->
+<a href="https://wa.me/5511965087899" target="_blank" rel="noopener" class="wa-float" aria-label="Iniciar conversa no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- ===================== JS ===================== -->
+<script>
+  // Nav scroll
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Carrossel de depoimentos — dots
+  const track = document.getElementById('depoTrack');
+  const dots  = document.querySelectorAll('.depo-dot');
+
+  function updateDots() {
+    const cards     = track.querySelectorAll('.depo-card');
+    const cardWidth = cards[0].offsetWidth + 16; // gap = 16px
+    const idx       = Math.round(track.scrollLeft / cardWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  track.addEventListener('scroll', updateDots, { passive: true });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const cards     = track.querySelectorAll('.depo-card');
+      const cardWidth = cards[0].offsetWidth + 16;
+      track.scrollTo({ left: Number(dot.dataset.index) * cardWidth, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
